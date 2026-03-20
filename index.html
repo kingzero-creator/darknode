@@ -462,15 +462,17 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:28
 
 <!-- NAV -->
 <nav>
-  <a class="logo" href="#">DARK<span class="logo-slash">/</span>NODE</a>
+  <a class="logo" href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'})">DARK<span class="logo-slash">/</span>NODE</a>
   <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#install">Install</a></li>
-    <li><a href="#hardware">Hardware</a></li>
+    <li><a href="javascript:void(0)" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">About</a></li>
+    <li><a href="javascript:void(0)" onclick="document.getElementById('install').scrollIntoView({behavior:'smooth'})">Install</a></li>
+    <li><a href="javascript:void(0)" onclick="document.getElementById('hardware').scrollIntoView({behavior:'smooth'})">Hardware</a></li>
     <li><a href="https://www.orynth.dev/" target="_blank" rel="noopener" class="nav-ext">Orynth ↗</a></li>
-    <li><a href="https://github.com/kingzero-creator" target="_blank" rel="noopener" class="nav-ext">GitHub ↗</a></li>
-    <li><a href="#faq">FAQ</a></li>
-    <li><a href="#donate" class="nav-cta">Support</a></li>
+    <li><a href="https://github.com/kingzero-creator/darknode" target="_blank" rel="noopener" class="nav-ext">GitHub ↗</a></li>
+    <li><a href="javascript:void(0)" onclick="document.getElementById('faq').scrollIntoView({behavior:'smooth'})">FAQ</a></li>
+    <li><a href="javascript:void(0)" onclick="document.getElementById('roadmap').scrollIntoView({behavior:'smooth'})">Roadmap</a></li>
+    <li><a href="https://github.com/kingzero-creator/darknode/blob/main/WHITEPAPER.md" target="_blank" rel="noopener" class="nav-ext">Whitepaper ↗</a></li>
+    <li><a href="javascript:void(0)" onclick="document.getElementById('donate').scrollIntoView({behavior:'smooth'})" class="nav-cta">Support</a></li>
   </ul>
   <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Open menu">
     <span></span><span></span><span></span>
@@ -483,14 +485,16 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:28
 
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobile-menu">
-  <a href="#about" onclick="closeMenu()">About</a>
-  <a href="#install" onclick="closeMenu()">Install</a>
-  <a href="#hardware" onclick="closeMenu()">Hardware</a>
+  <a href="javascript:void(0)" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'});closeMenu()">About</a>
+  <a href="javascript:void(0)" onclick="document.getElementById('install').scrollIntoView({behavior:'smooth'});closeMenu()">Install</a>
+  <a href="javascript:void(0)" onclick="document.getElementById('hardware').scrollIntoView({behavior:'smooth'});closeMenu()">Hardware</a>
   <a href="https://www.orynth.dev/" target="_blank" rel="noopener" onclick="closeMenu()" style="color:var(--accent2)">Orynth ↗</a>
-  <a href="https://github.com/kingzero-creator" target="_blank" rel="noopener" onclick="closeMenu()" style="color:var(--accent2)">GitHub ↗</a>
+  <a href="https://github.com/kingzero-creator/darknode" target="_blank" rel="noopener" onclick="closeMenu()" style="color:var(--accent2)">GitHub ↗</a>
   <a href="https://x.com/zeroking0905" target="_blank" rel="noopener" onclick="closeMenu()" style="color:var(--accent2)">X / Twitter ↗</a>
-  <a href="#faq" onclick="closeMenu()">FAQ</a>
-  <a href="#donate" onclick="closeMenu()" style="color:var(--accent)">Support</a>
+  <a href="javascript:void(0)" onclick="document.getElementById('faq').scrollIntoView({behavior:'smooth'});closeMenu()">FAQ</a>
+  <a href="javascript:void(0)" onclick="document.getElementById('roadmap').scrollIntoView({behavior:'smooth'});closeMenu()">Roadmap</a>
+  <a href="https://github.com/kingzero-creator/darknode/blob/main/WHITEPAPER.md" target="_blank" rel="noopener" onclick="closeMenu()" style="color:var(--accent2)">Whitepaper ↗</a>
+  <a href="javascript:void(0)" onclick="document.getElementById('donate').scrollIntoView({behavior:'smooth'});closeMenu()" style="color:var(--accent)">Support</a>
 </div>
 
 <!-- HERO -->
@@ -512,8 +516,8 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:28
   </p>
 
   <div class="hero-btns">
-    <a href="#install" class="btn-primary" data-en="▶ Quick Install" data-id="▶ Pasang Sekarang">▶ Quick Install</a>
-    <a href="https://github.com/kingzero-creator" class="btn-ghost" target="_blank" rel="noopener" data-en="View on GitHub →" data-id="Lihat di GitHub →">View on GitHub →</a>
+    <button class="btn-primary" onclick="document.getElementById('install').scrollIntoView({behavior:'smooth'})" data-en="▶ Quick Install" data-id="▶ Pasang Sekarang">▶ Quick Install</button>
+    <a href="https://github.com/kingzero-creator/darknode" class="btn-ghost" target="_blank" rel="noopener" data-en="View on GitHub →" data-id="Lihat di GitHub →">View on GitHub →</a>
   </div>
 
   <div class="trust-row">
@@ -698,6 +702,114 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:28
         <li><span class="chk">✓</span> Radio node + relay</li>
       </ul>
     </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<hr class="full-divider">
+<section id="roadmap">
+  <div class="section-eyebrow">roadmap</div>
+  <div class="section-title">Where we're<br><span>headed</span></div>
+  <p class="section-lead">Six phases from proof-of-concept to a fully sovereign mesh economy. Phases 1–2 are shipped. Phase 3 is in progress.</p>
+
+  <div style="display:flex;flex-direction:column;gap:2px;border:1px solid var(--border)">
+
+    <div class="reveal" style="display:flex;gap:0;border-bottom:1px solid var(--border)">
+      <div style="flex-shrink:0;width:140px;padding:24px 20px;border-right:1px solid var(--border);background:var(--bg2)">
+        <div style="font-family:'Orbitron',sans-serif;font-size:12px;font-weight:700;color:var(--accent)">Phase 1–2</div>
+        <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--dim);margin-top:4px">v0.1 – v0.4</div>
+        <div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:.15em;color:var(--accent);border:1px solid rgba(0,255,157,.3);padding:3px 8px;display:inline-block">✓ SHIPPED</div>
+      </div>
+      <div style="flex:1;padding:24px 28px;background:var(--bg2)">
+        <div style="font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;color:#fff;margin-bottom:12px">Foundation + Core Stack</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--muted)">✓ Local AI inference</span>
+          <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--muted)">✓ Mesh radio bridge</span>
+          <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--muted)">✓ Bitcoin wallet</span>
+          <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--muted)">✓ Cashu ecash</span>
+          <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--muted)">✓ Model manager</span>
+          <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--muted)">✓ Node telemetry</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal" style="display:flex;gap:0;border-bottom:1px solid var(--border)">
+      <div style="flex-shrink:0;width:140px;padding:24px 20px;border-right:1px solid var(--border);background:var(--bg2)">
+        <div style="font-family:'Orbitron',sans-serif;font-size:12px;font-weight:700;color:var(--accent2)">Phase 3</div>
+        <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--dim);margin-top:4px">v0.5 – v0.6</div>
+        <div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:.15em;color:var(--accent2);border:1px solid rgba(0,184,255,.3);padding:3px 8px;display:inline-block">⟳ ACTIVE</div>
+      </div>
+      <div style="flex:1;padding:24px 28px;background:var(--bg2)">
+        <div style="font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;color:#fff;margin-bottom:12px">Resilience & UX</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--accent2)">⟳ One-click installer</span>
+          <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--accent2)">⟳ Mobile dashboard</span>
+          <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--accent2)">⟳ ARM64 support</span>
+          <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--muted)">○ Docker image</span>
+          <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--muted)">○ Encrypted messages</span>
+          <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--muted)">○ Offline model bundle</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal" style="display:flex;gap:0;border-bottom:1px solid var(--border)">
+      <div style="flex-shrink:0;width:140px;padding:24px 20px;border-right:1px solid var(--border);background:var(--bg2)">
+        <div style="font-family:'Orbitron',sans-serif;font-size:12px;font-weight:700;color:var(--muted)">Phase 4</div>
+        <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--dim);margin-top:4px">v0.7 – v0.8</div>
+        <div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:.15em;color:var(--dim);border:1px solid var(--border);padding:3px 8px;display:inline-block">PLANNED</div>
+      </div>
+      <div style="flex:1;padding:24px 28px;background:var(--bg2)">
+        <div style="font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;color:#fff;margin-bottom:12px">Mesh Economy</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--muted)">○ Pay-per-query AI</span>
+          <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--muted)">○ Node reputation system</span>
+          <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--muted)">○ Mesh marketplace</span>
+          <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--muted)">○ Lightning integration</span>
+          <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--muted)">○ Cashu mint support</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal" style="display:flex;gap:0;border-bottom:1px solid var(--border)">
+      <div style="flex-shrink:0;width:140px;padding:24px 20px;border-right:1px solid var(--border);background:var(--bg2)">
+        <div style="font-family:'Orbitron',sans-serif;font-size:12px;font-weight:700;color:var(--muted)">Phase 5</div>
+        <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--dim);margin-top:4px">v0.9 – v1.0</div>
+        <div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:.15em;color:var(--dim);border:1px solid var(--border);padding:3px 8px;display:inline-block">PLANNED</div>
+      </div>
+      <div style="flex:1;padding:24px 28px;background:var(--bg2)">
+        <div style="font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;color:#fff;margin-bottom:12px">Decentralized Intelligence</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--muted)">○ Federated inference</span>
+          <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--muted)">○ Mesh-native RAG</span>
+          <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--muted)">○ AI agent mode</span>
+          <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--muted)">○ Shared knowledge base</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal" style="display:flex;gap:0">
+      <div style="flex-shrink:0;width:140px;padding:24px 20px;border-right:1px solid var(--border);background:var(--bg2)">
+        <div style="font-family:'Orbitron',sans-serif;font-size:12px;font-weight:700;color:var(--muted)">Phase 6</div>
+        <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--dim);margin-top:4px">v1.0+</div>
+        <div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:.15em;color:var(--dim);border:1px solid var(--border);padding:3px 8px;display:inline-block">RESEARCH</div>
+      </div>
+      <div style="flex:1;padding:24px 28px;background:var(--bg2)">
+        <div style="font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;color:#fff;margin-bottom:12px">Ecosystem</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--muted)">○ Plugin SDK</span>
+          <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--muted)">○ Community mesh map</span>
+          <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--muted)">○ Hardware kit partnerships</span>
+          <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--muted)">○ Satellite backhaul</span>
+          <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--muted)">○ Emergency services integration</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="margin-top:20px;display:flex;gap:12px;flex-wrap:wrap">
+    <a href="https://github.com/kingzero-creator/darknode/blob/main/ROADMAP.md" target="_blank" rel="noopener" class="btn-ghost" style="font-size:11px;padding:10px 20px">Full Roadmap →</a>
+    <a href="https://github.com/kingzero-creator/darknode/blob/main/WHITEPAPER.md" target="_blank" rel="noopener" class="btn-ghost" style="font-size:11px;padding:10px 20px">Read Whitepaper →</a>
   </div>
 </section>
 
@@ -1011,7 +1123,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:28
       <div class="wallet reveal">
         <div class="wallet-chain">Ethereum</div>
         <div class="wallet-symbol">Ξ</div>
-        <div class="wallet-addr" id="eth-addr">0xaA01e4F453d5ae9903EebeABA803f3388D20d024</div>
+        <div class="wallet-addr" id="eth-addr">0x962Fa344BBbf9276d01700EB7d7588031473F44d</div>
         <button class="copy-btn" onclick="copyAddr('eth-addr',this)">Copy Address</button>
       </div>
     </div>
@@ -1040,6 +1152,8 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:28
   <ul class="footer-links">
     <li><a href="https://github.com/kingzero-creator" target="_blank" rel="noopener">GitHub</a></li>
     <li><a href="https://x.com/zeroking0905" target="_blank" rel="noopener">Twitter</a></li>
+    <li><a href="https://github.com/kingzero-creator/darknode/blob/main/ROADMAP.md" target="_blank" rel="noopener">Roadmap</a></li>
+    <li><a href="https://github.com/kingzero-creator/darknode/blob/main/WHITEPAPER.md" target="_blank" rel="noopener">Whitepaper</a></li>
     <li><a href="https://www.orynth.dev/" target="_blank" rel="noopener">Orynth</a></li>
     <li><a href="https://meshtastic.org/" target="_blank" rel="noopener">Meshtastic</a></li>
     <li><a href="https://cashu.space" target="_blank" rel="noopener">Cashu</a></li>
